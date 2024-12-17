@@ -10,7 +10,7 @@
       pkgs   = import nixpkgs { inherit system; }; 
     in
     {
-      nixosModules.glf = import ./modules/glf.nix { inherit config pkgs; };
+      nixosModules.glf = import ./modules/glf.nix { inherit pkgs; };
     };
 
   
