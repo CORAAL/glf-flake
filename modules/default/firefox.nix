@@ -2,13 +2,13 @@
 
 {
 
-  options.firefox.enable = lib.mkOption {
+  options.glf.firefox.enable = lib.mkOption {
     description = "Enable GLF firefox configurations";
     type = lib.types.bool;
     default = lib.mkDefault true;
   };
 
-  config = lib.mkIf config.firefox.enable {
+  config = lib.mkIf config.glf.firefox.enable {
 
     programs.firefox = {
 	enable = true;

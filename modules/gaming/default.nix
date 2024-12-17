@@ -2,13 +2,13 @@
 
 {
 
-  options.gaming.enable = lib.mkOption {
+  options.glf.gaming.enable = lib.mkOption {
     description = "Enable GLF Fstrim configurations";
     type = lib.types.bool;
     default = lib.mkDefault true;
   };
 
-  config = lib.mkIf config.gaming.enable {
+  config = lib.mkIf config.glf.gaming.enable {
 
     environment.systemPackages = with pkgs; [
 	heroic

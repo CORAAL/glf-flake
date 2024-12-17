@@ -2,13 +2,13 @@
 
 {
 
-  options.fstrim.enable = lib.mkOption {
+  options.glf.fstrim.enable = lib.mkOption {
     description = "Enable GLF Fstrim configurations";
     type = lib.types.bool;
     default = lib.mkDefault true;
   };
 
-  config = lib.mkIf config.fstrim.enable {
+  config = lib.mkIf config.glf.fstrim.enable {
 
     services.fstrim = {
 	enable = true;
