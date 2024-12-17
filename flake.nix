@@ -8,6 +8,7 @@
   {
     nixosModules = {
       default = import ./modules/default;
+      gaming  = import ./modules/gaming; 
     };
   };
   
