@@ -8,16 +8,16 @@
   {
     nixosModules = {
 
-      default = { config, pkgs, ... }: {
+      default = { config, lib, ... }: {
 
-        options.hello.enable = pkgs.lib.mkOption {
+        options.hello.enable = lib.mkOption {
 	  description = "Enable the hello package";
-	  type = pkgs.lib.types.bool;
-	  default = false;
+	  type = lib.types.bool;
+	  default = true;
 	};
 
-	config = pkgs.lib.mkIf config.hello.enable {
-          environment.systemPackages = with pkgs; [ hello ];
+	config = lib.mkIf config.hello.enable {
+          environment.systemPackages = with config.nixpkgs.pkgs; [ hello ];
 	};
       };
     };
