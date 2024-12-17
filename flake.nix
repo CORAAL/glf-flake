@@ -7,8 +7,9 @@
   outputs = { self, nixpkgs, ... }:
   {
     nixosModules = {
-      default = import ./modules/default.nix;
+      default = import ./modules/default;
     };
+    description = "A collection of NixOS modules, including Hello and boot configuration.";
   };
   
 }
