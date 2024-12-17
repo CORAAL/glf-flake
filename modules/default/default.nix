@@ -2,13 +2,14 @@
 
   _module = {
     meta = {
-      description = "Active des éléments essentiels";
+      description = "Enable base configuration for GLF-OS";
     };
   };
 
   imports = [
     ./boot.nix
     ./fstrim.nix
+    ./firefox.nix
   ];
   
 }
