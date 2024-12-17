@@ -2,12 +2,6 @@
 
 {
 
-  _module = {
-    meta = {
-      description = "Enable gaming configuration for GLF-OS";
-    };
-  };
-
   options.gaming.enable = lib.mkOption {
     description = "Enable GLF Fstrim configurations";
     type = lib.types.bool;
